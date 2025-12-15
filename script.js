@@ -100,3 +100,7 @@ store.products.forEach(product => {
         console.log(`${product.name} is not expired.`);
     }
 });
+// pirnt the total inventory value before and after applying 15% discount to all products
+console.log(`Total Inventory Value before discount: $${store.totalInventoryValue}`);
+Product.applyDiscountByPriceRange(store.products, 0, Infinity, 15);
+console.log(`Total Inventory Value after 15% discount: $${store.totalInventoryValue}`);
