@@ -15,3 +15,7 @@ set updatePrice(newPrice) {
         this.price = newPrice;
     }
 }
+module.exports = Product;
+function createProduct(params) {
+    return new Product(params);
+}
