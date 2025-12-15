@@ -8,3 +8,6 @@ class Product {
 get totalValue() {
         return this.price * this.quantity;
 }
+ set updateQuantity(amount) {
+        this.quantity += amount;
+ }
