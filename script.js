@@ -19,3 +19,10 @@ module.exports = Product;
 function createProduct(params) {
     return new Product(params);
 }
+module.exports.createProduct = createProduct;
+module.exports = Product;
+// add new property to Product class
+Product.prototype.category = 'General';
+function getCategory() {
+    return this.category;
+}
