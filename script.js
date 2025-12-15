@@ -26,3 +26,11 @@ Product.prototype.category = 'General';
 function getCategory() {
     return this.category;
 }
+Product.prototype.getCategory = getCategory;
+// add new method to initialize product details
+Product.prototype.initialize = function(name, price, quantity, expirationDate) {
+    this.name = name;
+    this.price = price;
+    this.quantity = quantity;
+    this.expirationDate = expirationDate;
+};
