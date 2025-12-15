@@ -1,26 +1,26 @@
 class Product {
     constructor(parameters) {
         this.parameters = parameters;
-        this.name = name;
-        this.price = 0;
-        this.quantity = 0;          
+        this.name = name; // name of the product
+        this.price = 0; // price per unit
+        this.quantity = 0; // Quantity in stock          
     }
 get totalValue() {
         return this.price * this.quantity;
 }
  set updateQuantity(amount) {
-        this.quantity += amount;
+        this.quantity += amount; // qunatity amount in total
  }
 set updatePrice(newPrice) {
-        this.price = newPrice;
+        this.price = newPrice; // new price for the product
     }
 }
 // add new method to initialize product details
 Product.prototype.initialize = function(name, price, quantity, expirationDate) {
-    this.name = name;
-    this.price = price;
-    this.quantity = quantity;
-    this.expirationDate = expirationDate;
+    this.name = name; // name of the product
+    this.price = price; // price per unit
+    this.quantity = quantity; // Quantity in stock 
+    this.expirationDate = expirationDate; // product expiration date
 };
 // add toString method that includes expiry Date
 Product.prototype.toString = function() {
@@ -43,11 +43,11 @@ class Store {
 
     // add product to inventory
     addProduct(product) {
-        this.products.push(product);
+        this.products.push(product); // adding new product to the inventory
     }
 // get total inventory value
     get totalInventoryValue() {
-        return this.products.reduce((total, product) => total + product.totalValue, 0);
+        return this.products.reduce((total, product) => total + product.totalValue, 0); // total value for the inventory
     }
  // find products by category
     findProductsByCategory(category) {
@@ -87,4 +87,5 @@ Product.applyDiscountByPriceRange(store.products, 0.5, 1.0, 10);
 console.log('After applying discount:');
 store.products.forEach(product => {
     console.log(product.toString());
+
 });
