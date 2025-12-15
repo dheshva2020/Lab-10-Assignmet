@@ -34,3 +34,7 @@ Product.prototype.initialize = function(name, price, quantity, expirationDate) {
     this.quantity = quantity;
     this.expirationDate = expirationDate;
 };
+// add toString method that includes expiry Date
+Product.prototype.toString = function() {
+    return `Product Name: ${this.name}, Price: ${this.price}, Quantity: ${this.quantity}, Expiration Date: ${this.expirationDate}`;
+}
