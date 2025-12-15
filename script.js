@@ -61,3 +61,8 @@ class Store {
     get totalInventoryValue() {
         return this.products.reduce((total, product) => total + product.totalValue, 0);
     }
+ // find products by category
+    findProductsByCategory(category) {
+        return this.products.filter(product => product.getCategory() === category);
+    }
+}
