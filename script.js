@@ -38,3 +38,6 @@ Product.prototype.initialize = function(name, price, quantity, expirationDate) {
 Product.prototype.toString = function() {
     return `Product Name: ${this.name}, Price: ${this.price}, Quantity: ${this.quantity}, Expiration Date: ${this.expirationDate}`;
 }
+// add static method to apply discount to products by price range
+Product.applyDiscountByPriceRange = function(products, minPrice, maxPrice, discountPercent) {
+    products.forEach(product => {
