@@ -104,3 +104,13 @@ store.products.forEach(product => {
 console.log(`Total Inventory Value before discount: $${store.totalInventoryValue}`);
 Product.applyDiscountByPriceRange(store.products, 0, Infinity, 15);
 console.log(`Total Inventory Value after 15% discount: $${store.totalInventoryValue}`);
+//add find and print the setails of specific product by its name
+function findProductByName(store, productName) {
+    return store.products.find(product => product.name === productName);
+}   
+const searchedProduct = findProductByName(store, 'Orange');
+if (searchedProduct) {
+    console.log(`Found Product: ${searchedProduct.toString()}`);
+} else {
+    console.log('Product not found.');
+}
