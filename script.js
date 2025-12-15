@@ -59,11 +59,6 @@ Product.prototype.isExpired = function(currentDate) {
     const expDate = new Date(this.expirationDate);
     return currentDate > expDate;
 }
-// add product to the store and check expiration
-store.addProduct(prod1);
-store.addProduct(prod2);
-store.addProduct(prod3);
-const currentDate = new Date('2024-11-01');
 // pirnt the total inventory value before and after applying 15% discount to all products
 console.log(`Total Inventory Value before discount: $${store.totalInventoryValue}`);
 Product.applyDiscountByPriceRange(store.products, 0, Infinity, 15);
