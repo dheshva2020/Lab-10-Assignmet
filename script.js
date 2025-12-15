@@ -91,3 +91,12 @@ Product.prototype.isExpired = function(currentDate) {
     const expDate = new Date(this.expirationDate);
     return currentDate > expDate;
 }
+// add product to the store and check expiration
+const currentDate = new Date('2024-12-01');
+store.products.forEach(product => {
+    if (product.isExpired(currentDate)) {
+        console.log(`${product.name} is expired.`);
+    } else {
+        console.log(`${product.name} is not expired.`);
+    }
+});
