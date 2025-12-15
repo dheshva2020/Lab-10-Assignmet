@@ -41,3 +41,8 @@ Product.prototype.toString = function() {
 // add static method to apply discount to products by price range
 Product.applyDiscountByPriceRange = function(products, minPrice, maxPrice, discountPercent) {
     products.forEach(product => {
+  if (product.price >= minPrice && product.price <= maxPrice) {
+            product.price -= product.price * (discountPercent / 100);
+        }
+    });
+}
