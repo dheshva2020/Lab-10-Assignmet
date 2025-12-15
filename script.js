@@ -66,3 +66,22 @@ class Store {
         return this.products.filter(product => product.getCategory() === category);
     }
 }
+// add testing the system
+const store = new Store();
+const prod1 = new Product();initialize('Apple', 1.0, 100, '2024-12-31');
+const prod2 = new Product();
+prod2.initialize('Banana', 0.5, 200, '2024-11-30');
+const prod3 = new Product();
+prod3.initialize('Orange', 1.5, 150, '2024-10-15');
+store.addProduct(prod1);
+store.addProduct(prod2);
+store.addProduct(prod3);
+console.log(`Total Inventory Value: $${store.totalInventoryValue}`);
+const fruits = store.findProductsByCategory('General');
+console.log(`Fruits in Store: ${fruits.map(fruit => fruit.name).join(', ')}`);
+Product.applyDiscountByPriceRange(store.products, 0.5, 1.0, 10);
+console.log('After applying discount:');
+store.products.forEach(product => {
+    console.log(product.toString());
+}
+);
