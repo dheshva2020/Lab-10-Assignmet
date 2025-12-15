@@ -117,5 +117,3 @@ console.log('After applying discount:');
 store.products.forEach(product => {
     console.log(product.toString());
 });
-
-
