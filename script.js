@@ -11,3 +11,7 @@ get totalValue() {
  set updateQuantity(amount) {
         this.quantity += amount;
  }
+set updatePrice(newPrice) {
+        this.price = newPrice;
+    }
+}
