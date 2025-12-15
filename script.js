@@ -46,3 +46,9 @@ Product.applyDiscountByPriceRange = function(products, minPrice, maxPrice, disco
         }
     });
 }
+      
+// add store class to manage multiple products
+class Store {
+    constructor() {
+        this.products = [];
+    }
