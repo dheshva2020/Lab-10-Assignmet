@@ -85,3 +85,9 @@ store.products.forEach(product => {
     console.log(product.toString());
 }
 );
+
+// add perishable products with expiration date check
+Product.prototype.isExpired = function(currentDate) {
+    const expDate = new Date(this.expirationDate);
+    return currentDate > expDate;
+}
