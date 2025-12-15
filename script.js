@@ -119,3 +119,4 @@ store.products.forEach(product => {
     console.log(product.toString());
 
 });
+
