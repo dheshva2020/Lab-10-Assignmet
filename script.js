@@ -114,3 +114,18 @@ if (searchedProduct) {
 } else {
     console.log('Product not found.');
 }
+// add these product to a store object
+store.addProduct(prod1);
+store.addProduct(prod2);
+store.addProduct(prod3);
+prod1.initialize('Apple', 1.0, 100, '2024-12-31');
+prod2.initialize('Banana', 0.5, 200, '2024-11-30');
+prod3.initialize('Orange', 1.5, 150, '2024-10-15');
+console.log(`Total Inventory Value: $${store.totalInventoryValue}`);
+const fruits2 = store.findProductsByCategory('General');
+console.log(`Fruits in Store: ${fruits2.map(fruit => fruit.name).join(', ')}`);
+Product.applyDiscountByPriceRange(store.products, 0.5, 1.0, 10);
+console.log('After applying discount:');
+store.products.forEach(product => {
+    console.log(product.toString());
+});
