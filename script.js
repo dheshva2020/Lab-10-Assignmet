@@ -60,14 +60,10 @@ Product.prototype.isExpired = function(currentDate) {
     return currentDate > expDate;
 }
 // add product to the store and check expiration
-const currentDate = new Date('2024-12-01');
-store.products.forEach(product => {
-    if (product.isExpired(currentDate)) {
-        console.log(`${product.name} is expired.`);
-    } else {
-        console.log(`${product.name} is not expired.`);
-    }
-});
+const store = new Store();
+const prod1 = new Product();
+const prod2 = new Product();
+const prod3 = new Product();
 // pirnt the total inventory value before and after applying 15% discount to all products
 console.log(`Total Inventory Value before discount: $${store.totalInventoryValue}`);
 Product.applyDiscountByPriceRange(store.products, 0, Infinity, 15);
@@ -97,3 +93,4 @@ console.log('After applying discount:');
 store.products.forEach(product => {
     console.log(product.toString());
 });
+
